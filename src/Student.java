@@ -10,22 +10,18 @@ public class Student implements Comparable<Student> {// implements Comparable<In
         this.grade = grade;
     }
 
-    public int getGrade() {
-        return grade;
-    }
-
     @Override
     public boolean equals(Object other) {
         if (other instanceof Student)
-            return this.compareTo(((Student) other))==0;
+            return this.compareTo(((Student) other)) == 0;
         return false;
     }
 
     @Override
     public int compareTo(Student other) {
-        if (this.grade>other.grade)
+        if (this.grade > other.grade)
             return 1;
-        if (this.grade<other.grade)
+        if (this.grade < other.grade)
             return -1;
         return 0;
     }
@@ -33,13 +29,9 @@ public class Student implements Comparable<Student> {// implements Comparable<In
     @Override
     public String toString() {
         return "Student: " +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", grade=" + grade;
+                "Name:'" + name + '\'' +
+                ", ID:" + id +
+                ", Grade:" + grade;
     }
 
-//    @Override
-//    public int compareTo(Student o) {
-//        return 0;
-//    }
 }
