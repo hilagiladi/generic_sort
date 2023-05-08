@@ -31,5 +31,15 @@ public class SortedGroup<E extends Comparable<E>> {
         return items.iterator();
     }
 
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        Iterator<E> iterator = this.iterator();
 
+        while (iterator.hasNext()) {
+            E item = iterator.next();
+            str.append(item).append("\n");
+        }
+        return str.toString();
+    }
 }

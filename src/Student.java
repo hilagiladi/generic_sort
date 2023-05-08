@@ -1,4 +1,4 @@
-public class Student implements Comparable<Integer> {
+public class Student implements Comparable<Student> {// implements Comparable<Integer> {
 
     private String name;
     private long id;
@@ -17,15 +17,15 @@ public class Student implements Comparable<Integer> {
     @Override
     public boolean equals(Object other) {
         if (other instanceof Student)
-            return this.compareTo(((Student) other).grade)==0;
+            return this.compareTo(((Student) other))==0;
         return false;
     }
 
     @Override
-    public int compareTo(Integer otherGrade) {
-        if (this.grade>otherGrade)
+    public int compareTo(Student other) {
+        if (this.grade>other.grade)
             return 1;
-        if (this.grade<otherGrade)
+        if (this.grade<other.grade)
             return -1;
         return 0;
     }
@@ -37,4 +37,9 @@ public class Student implements Comparable<Integer> {
                 ", id=" + id +
                 ", grade=" + grade;
     }
+
+//    @Override
+//    public int compareTo(Student o) {
+//        return 0;
+//    }
 }
