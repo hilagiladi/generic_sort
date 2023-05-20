@@ -23,7 +23,6 @@ public class SortedGroup<E extends Comparable<E>> {
                 count++;
             }
         }
-        Collections.sort(this.items);
         return count;
     }
 
